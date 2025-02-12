@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardapio</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .lista {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            min-height: 100px;
+        }
+
+        .item {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .item:hover {
+            background-color: #d9d9d9;
+        }
+
+        .item:active {
+            background-color: rgb(112, 112, 112);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h2>Cardapio</h2>
+        <div id="lista1" class="lista">
+            <!-- Os itens serão gerados dinamicamente pelo JavaScript -->
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <a href="pagina2.html">Alterar Tela</a>
+        </div>
+        <div id="QuantCarrinho">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

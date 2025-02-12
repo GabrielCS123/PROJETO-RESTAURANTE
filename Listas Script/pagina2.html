@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .lista {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            min-height: 100px;
+        }
+        
+        .item {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .divTotal {
+            background-color: #ccc;
+        }
+
+        .divAD {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h2>Carrinho</h2>
+        <div id="lista2" class="lista">
+            <!-- Itens transferidos aparecerão aqui -->
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <a href="pagina1.html">Alterar Tela</a>
+        </div>
+        <div id="QuantCarrinho">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

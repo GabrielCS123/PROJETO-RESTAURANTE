@@ -1,0 +1,108 @@
+  /* Variaveis */
+
+
+/* Principais */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_direito {
+    display: flex;
+    gap: 30px;   
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header nav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+}
+
+header .logo p {
+    margin: 3px 0 0 0;
+    font-size: xx-small;
+}
+
+header .logo img {
+    width: 20px;
+}
+header nav img {
+    width: 20px;
+}
+
+header .botao_menu, header .botao_menu img {
+    display: flex;
+}
+
+header .botao_menu img {
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+header .botao_carrinho a {
+    display: flex;
+}
+
+/* Menu */
+
+.menu {
+    display: none;
+}
+
+/* Menu mobile */
+
+.menu_mobile nav {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5em;
+}
+
+.menu_mobile nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 35px;
+}
+
+.menu_mobile div img {
+    width: 40px;
+    padding: 1em;
+    cursor: pointer;
+}
+.menu_mobile div{
+    display: flex;
+    justify-content: end;  
+}
+
+.menu_mobile {
+    display: none;
+}

@@ -1,0 +1,142 @@
+/* banner 1 */
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.banner .texto_banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner .texto_banner h1 {
+    font-size: 24px;
+}
+
+.banner .texto_banner h2 {
+    font-size: 32px;
+}
+
+.banner_imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner_imagem::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(158, 67, 3, 0.664); /* Laranja com transparência */
+    mix-blend-mode: multiply; /* Mistura a cor com a imagem */
+}
+
+/* servicos */
+
+.servicos {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px;
+    background-color: #fff;
+}
+.servico {
+    text-align: center;
+}
+.servico img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Chamada cardapio */
+
+.chamada-pedidos {
+    background-color: #ff6a00;
+    color: white;
+    text-align: center;
+    padding: 30px 30px 40px 30px;
+    position: relative;
+}
+
+.conteudo-chamada h1 {
+    font-size: 24px;
+    margin: 0 0 30px 0;
+}
+
+.botao-cardapio {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid white;
+    color: #ff6a00;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-cardapio:hover {
+    background-color: #ff6a00;
+    color: white;
+}
+
+/* Chamada cardapio */
+
+.mais-amados {
+    text-align: center;
+    background-color: white;
+    padding: 40px 0px;
+}
+
+.mais-amados h2 {
+    font-size: 22px;
+    margin:0 0 20px 0;
+}
+
+.lista-pizzas {
+    background-color: #ff6a00;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.item-pizza {
+    text-align: center;
+    max-width: 100px;
+}
+
+.item-pizza img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item-pizza p {
+    color: #fff;
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.rodape-cardapio {
+    margin-top: 10px;
+}
+
+.rodape-cardapio p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.rodape-cardapio a {
+    background-color: #ff0000;
+    color: #fff;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style_cardapio.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="imagens/iconepizza.png" alt="logo">
+            <p>Seu logo</p>
+        </a>
+        <nav class="menu">
+            <a href="cardapio.html">Cardápio</a>
+            <a href="sobre.html">Sobre-nós</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <section class="header_direito">
+            <div class="botao_menu">
+                <img src="imagens/menu.png" alt="botão menu">
+            </div>
+            <nav class="botao_carrinho">
+                <a href="carrinho.html">
+                    <img src="imagens/carrinho.png" alt="carrinho">
+                </a>
+            </nav>
+        </section>
+    </header>
+
+    <div class="menu_mobile">
+        <div>
+            <img src="imagens/x.png" alt="">
+        </div>
+
+        <nav>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="sobre.html">Sobre-nós</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+
+    <main>
+
+        <section class="pesquisa-cardapio">
+            <div class="barra-pesquisa">
+                <input type="text" placeholder="Busque pelo seu pedido">
+                <button><img src="imagens/lupa.png" alt="Buscar"></button>
+            </div>
+            <div class="filtros">
+                <button class="filtro">Salgada</button>
+                <button class="filtro">Doce</button>
+                <button class="filtro">Queijo</button>
+                <button class="filtro">Calabresa</button>
+            </div>
+        </section>
+    
+        <section class="lista-produtos">
+            <div class="produto">
+                <img src="imagens/exemplo_pizza1.png" alt="Pizza Marguerita">
+                <p class="preco">R$ 39,90</p>
+                <p class="nome">Pizza Marguerita</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/exemplo_pizza1.png" alt="Pizza Calabresa">
+                <p class="preco">R$ 42,90</p>
+                <p class="nome">Pizza Calabresa</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/exemplo_pizza1.png" alt="Pizza Quatro Queijos">
+                <p class="preco">R$ 39,90</p>
+                <p class="nome">Pizza Quatro Queijos</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/exemplo_pizza1.png" alt="Pizza Portuguesa">
+                <p class="preco">R$ 39,90</p>
+                <p class="nome">Pizza Portuguesa</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/exemplo_pizza1.png" alt="Pizza Frango com Catupiry">
+                <p class="preco">R$ 39,90</p>
+                <p class="nome">Pizza Frango com Catupiry</p>
+            </div>
+            <div class="produto">
+                <img src="imagens/exemplo_pizza1.png" alt="Pizza de Pepperoni">
+                <p class="preco">R$ 39,90</p>
+                <p class="nome">Pizza de Pepperoni</p>
+            </div>
+        </section>
+
+    </main>
+</body>
+<script src="scripts/script_menu.js"></script>
+
+</html>
