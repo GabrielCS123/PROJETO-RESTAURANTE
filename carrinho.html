@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/style_index.css">
+    <link rel="stylesheet" href="styles/style_carrinho.css">
 </head>
 
 <body>
@@ -47,7 +47,89 @@
 
     <main>
 
-        <h1>Carrinho</h1>
+        <section class="secao_itens">
+            <h2>Itens</h2>
+            <div class="itens">
+
+                <div class="item">
+                    <div class="item_detalhes">
+
+                        <div class="item_detalhes_imagem">
+                            <img src="imagens/exemplo_pizza1.png" alt="">
+                        </div>
+                        <div class="item_detalhes_descricoes">
+                            <h3>Pizza de Calabresa</h3>
+                            <div class="item_detalhes_descricoes_quantidade">
+                                <button>-</button>
+                                <p>2</p>
+                                <button>+</button>
+                            </div>
+                        </div>
+                        <div class="item_detalhes_valor">
+                            <p>R$ 42,90</p>
+                        </div>
+                    </div>
+
+                    <div class="item_observacao">
+                        <label for="observacao">Alguma observação?</label>
+                        <textarea id="observacao" name="observacao"
+                            placeholder="Ex: Sem cebola, ponto da carne, etc."></textarea>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="item_detalhes">
+
+                        <div class="item_detalhes_imagem">
+                            <img src="imagens/exemplo_pizza1.png" alt="">
+                        </div>
+                        <div class="item_detalhes_descricoes">
+                            <h3>Pizza de Portuguesa</h3>
+                            <div class="item_detalhes_descricoes_quantidade">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
+                            </div>
+                        </div>
+                        <div class="item_detalhes_valor">
+                            <p>R$ 67,80</p>
+                        </div>
+                    </div>
+
+                    <div class="item_observacao">
+                        <label for="observacao">Alguma observação?</label>
+                        <textarea id="observacao" name="observacao"
+                            placeholder="Ex: Sem cebola, ponto da carne, etc."></textarea>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="secao_detalhes">
+            <form>
+                <h2>Detalhes do Pedido</h2>
+
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Seu nome completo" required>
+
+                <fieldset>
+                    <legend>Tipo de pedido</legend>
+                    <label>
+                        <input type="radio" name="tipoPedido" value="entrega" checked> Entrega
+                    </label>
+                    <label>
+                        <input type="radio" name="tipoPedido" value="retirada"> Retirar no local
+                    </label>
+                </fieldset>
+
+                <label for="endereco">Endereço</label>
+                <textarea id="endereco" placeholder="Endereço para entrega com rua, numero, bairro..."></textarea>
+            </form>
+
+        </section>
 
     </main>
 </body>

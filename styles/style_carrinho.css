@@ -1,0 +1,134 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 5%;
+    width: 90%;
+}
+
+.secao_itens, .secao_detalhes {
+    background-color: #ff660094;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.secao_itens h2, .secao_detalhes h2 {
+    color: #000000;
+    margin: 0px;
+}
+
+.itens {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    border-bottom: 1px solid #ccc;
+}
+
+.item_detalhes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item_detalhes_imagem img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item_detalhes_descricoes {
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.item_detalhes_descricoes h3 {
+    font-size: 20px;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+
+.item_detalhes_descricoes_quantidade {
+    background-color: #ffffff;
+    display: inline-flex;
+    padding: 6px 7px;
+    border-radius: 8px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.item_detalhes_descricoes_quantidade button {
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.item_detalhes_descricoes_quantidade p {
+    margin: 0;
+}
+
+.item_detalhes_descricoes_quantidade button:hover {
+    color: #e65a00;
+}
+
+.item_detalhes_valor p {
+    color: #000000;
+    margin: 0;
+}
+
+.item_observacao {
+    margin-top: 10px;
+}
+
+.item_observacao label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item_observacao textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.secao_detalhes label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.secao_detalhes input[type="text"],
+.secao_detalhes textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.secao_detalhes fieldset {
+    border: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.secao_detalhes legend {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.secao_detalhes label input[type="radio"] {
+    margin-right: 5px;
+}
