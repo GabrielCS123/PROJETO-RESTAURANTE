@@ -18,6 +18,12 @@ h2 {
     font-size: 30px;
 }
 
+.listaCarrinho::before {
+    content: "Itens";
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .listaCarrinho,
 .secao_detalhes {
     background-color: #ff660094;
