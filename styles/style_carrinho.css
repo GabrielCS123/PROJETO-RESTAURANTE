@@ -173,3 +173,39 @@ h2 {
 .secao_detalhes label input[type="radio"] {
     margin-right: 5px;
 }
+
+.secao_final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.secao_final a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.botao_enviar {
+    background-color: rgb(56, 229, 56);
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    padding: 4px 6px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao_enviar:hover {
+    background-color: #5cd260;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+.botao_enviar:active {
+    background-color: #52c958;
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

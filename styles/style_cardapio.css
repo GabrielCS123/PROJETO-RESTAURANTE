@@ -44,27 +44,57 @@ body {
 .barra-pesquisa img {
     width: 20px;
     height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+#botaoPesquisa img:hover {
+    filter: brightness(0.8) contrast(1.2);
+    transform: scale(1.1);
+}
+
+#botaoPesquisa img:active {
+    transform: scale(0.95);
 }
 
 .filtros {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.filtros::-webkit-scrollbar {
+    display: none;
 }
 
 .filtro {
     background-color: white;
     color: #ff6a00;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 15px;
+    border: 2px solid #ff6a00;
+    padding: 10px 18px;
+    border-radius: 20px;
     font-size: 14px;
-    cursor: pointer;
     font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    flex: 0 0 auto;
 }
 
 .filtro:hover {
-    background-color: #fff3e0;
+    background-color: #fdd578;
+    color: rgb(255, 0, 0);
+    border-color: #ff6a00;
+    transform: scale(1.05);
+}
+
+.filtro:active {
+    background-color: #f89c5f;
+    border-color: #e65c00;
+    transform: scale(0.98);
 }
 
 .listaCardapio{
@@ -75,7 +105,7 @@ body {
 }
 
 .produto {
-    background-color: #f3f3f3;
+    background-color: #e2e2e2;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
@@ -103,4 +133,34 @@ body {
 .produto .descricao {
     font-size: 12px;
     color: #333;
+}
+
+.produto:hover {
+    background-color: white;
+}
+
+.botaoEnviar {
+    background-color: rgb(255, 168, 47);
+    border-radius: 12px;
+    border: 2px solid rgb(243, 243, 243);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.botaoEnviar:hover {
+    background-color: rgb(143, 97, 32);
+    color: #ffffff;
+    border: 2px solid black;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.botaoEnviar:active {
+    background-color: rgb(120, 80, 25);
+    transform: scale(0.98);
 }

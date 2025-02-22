@@ -106,3 +106,25 @@ header .botao_carrinho a {
 .menu_mobile {
     display: none;
 }
+
+/*Contador do carrinho*/
+
+.botao_carrinho {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#QuantCarrinho {
+    display: flex;
+    text-align: center;
+    padding: 2px 1px 0 1px;
+    position: absolute;
+    background-color: #fdae53;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: translate(50%, -45%);
+}

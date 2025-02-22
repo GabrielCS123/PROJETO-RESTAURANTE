@@ -18,7 +18,7 @@ if (!localStorage.getItem('listaCardapio')) {
         },
 
         {
-            id: 4, nome: 'Pizza de Chocolate', valor: 35.50, descricao: 'Delicioso creme de chocolate, morangos frescos e raspas de chocolate branco.',
+            id: 4, nome: 'Pizza de Chocolate', valor: 35.50, descricao: 'chocolate, morangos frescos e raspas de chocolate branco.',
             imagem: 'imagens/exemplo_pizza1.png', quantidade: 0, tag: 'Doce'
         }
 
@@ -83,7 +83,7 @@ function mostrarQuantidade() {
     const quantCarrinho = document.getElementById('QuantCarrinho')
 
     if (quantidade > 0) {
-        quantCarrinho.innerHTML = `<p>Itens no Carrinho: ${quantidade}</p>`
+        quantCarrinho.innerHTML = quantidade
         quantCarrinho.style.display = 'block' // Exibe o QuantCarrinho
     } else {
         quantCarrinho.style.display = 'none' // Esconde o QuantCarrinho
