@@ -150,6 +150,19 @@ if (document.getElementById('listaCardapio')) {
     renderizarCardapio('listaCardapio')
 }
 
+// Salvar observações no localStorage sempre que forem digitadas
+document.addEventListener('input', (event) => {
+    if (event.target.classList.contains('observacao-input')) {
+        let listaCarrinho = JSON.parse(localStorage.getItem('listaCarrinho')) || [];
+        const itemId = parseInt(event.target.dataset.id, 10);
+        const item = listaCarrinho.find(i => i.id === itemId);
+
+        if (item) {
+            item.observacao = event.target.value;
+            localStorage.setItem('listaCarrinho', JSON.stringify(listaCarrinho));
+        }
+    }
+});
 
 // Renderizar lista do carrinho
 function renderizarCarrinho(containerId) {
@@ -159,7 +172,7 @@ function renderizarCarrinho(containerId) {
     container.innerHTML = ''; // Limpa o conteúdo do carrinho para evitar duplicação
 
     if (lista.length === 0) {
-        container.innerHTML = `<p>Seu carrinho está vazio. Adicione itens!</p>`; // Exibe mensagem se o carrinho estiver vazio
+        container.innerHTML = `<p>Seu carrinho está vazio. Adicione itens!</p>`;
     } else {
         lista.forEach(item => {
             const divTotal = document.createElement('div');
@@ -188,8 +201,8 @@ function renderizarCarrinho(containerId) {
                     </div>
                 </div>
                 <div class="item_observacao">
-                    <label for="observacao">Alguma observação?</label>
-                    <textarea id="observacao_${item.id}" name="observacao" placeholder="Ex: Sem cebola, ponto da carne, etc."></textarea>
+                    <label for="observacao_${item.id}">Alguma observação?</label>
+                    <textarea class="observacao-input" data-id="${item.id}" placeholder="Ex: Sem cebola, ponto da carne, etc.">${item.observacao || ''}</textarea>
                 </div>
             `;
             container.appendChild(divTotal);
@@ -204,6 +217,7 @@ function renderizarCarrinho(containerId) {
         });
     }
 }
+
 
 // Mover item para lista do carrinho
 function moverItem(id) {
