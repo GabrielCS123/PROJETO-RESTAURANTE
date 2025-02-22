@@ -130,6 +130,7 @@ function renderizarCardapio(containerId, filtro = null, termoPesquisa = '') {
                     <p class="nome">${item.nome}</p>
                     <p class="descricao">${item.descricao}</p>
                     <p class="preco">${item.valor}</p>
+                    <button class="botaoEnviar"">Enviar para o carrinho</button>
                 </div>
             </div>
         `
@@ -257,15 +258,17 @@ if (document.getElementById('listaCardapio')) {
     renderizarCardapio('listaCardapio')
 
     document.getElementById('listaCardapio').addEventListener('click', (event) => {
-        const itemDiv = event.target.closest('.item')
-        if (itemDiv) {
-            const itemId = parseInt(itemDiv.dataset.id, 10)
-            moverItem(itemId)
-            renderizarCardapio('listaCardapio')  // Re-renderiza o cardápio para atualizar a exibição
+        if (event.target.classList.contains('botaoEnviar')) {
+            const itemDiv = event.target.closest('.item')
+            if (itemDiv) {
+                const itemId = parseInt(itemDiv.dataset.id, 10)
+                moverItem(itemId)
+                renderizarCardapio('listaCardapio')  // Re-renderiza o cardápio para atualizar a exibição
+            }
         }
     })
-
 }
+
 
 // Página 2 (Lista Carrinho)
 if (document.getElementById('listaCarrinho')) {
@@ -375,7 +378,9 @@ function enviarCarrinhoParaWhatsApp() {
 
         // Para cada item no carrinho, adicione as informações (nome, quantidade, preço, observação)
         listaCarrinho.forEach(item => {
-            const observacao = document.getElementById(`observacao_${item.id}`).value || 'Sem observação';
+            // Captura a observação diretamente do item salvo no localStorage
+            const observacao = item.observacao || 'Sem observação';
+        
             mensagem += `
             Produto: ${item.nome}
             Quantidade: ${item.quantidade}
@@ -384,6 +389,7 @@ function enviarCarrinhoParaWhatsApp() {
             -------------------------
             `;
         });
+        
 
         // Codifique a mensagem para ser usada na URL
         const mensagemCodificada = encodeURIComponent(mensagem.trim());
