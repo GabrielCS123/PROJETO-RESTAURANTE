@@ -150,8 +150,12 @@ body {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
 }
 
+/* Hover */
 .botaoEnviar:hover {
     background-color: rgb(143, 97, 32);
     color: #ffffff;
@@ -160,7 +164,25 @@ body {
     transform: scale(1.05);
 }
 
+/* Active */
 .botaoEnviar:active {
     background-color: rgb(120, 80, 25);
     transform: scale(0.98);
+}
+
+/* Mobile-friendly transitions */
+.botaoEnviar {
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botaoEnviar:hover,
+.botaoEnviar:active {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Especificamente para performance e animações no mobile */
+@supports (--css: variables) {
+    .botaoEnviar {
+        transition: all 0.2s ease-in-out;
+    }
 }
