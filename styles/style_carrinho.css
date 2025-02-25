@@ -118,6 +118,7 @@ h2 {
 
 .botao_apagar {
     display: grid;
+    cursor: pointer;
 }
 
 .botao_apagar img {
@@ -184,13 +185,31 @@ h2 {
 .secao_final a {
     text-decoration: none;
     color: #000000;
+    
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
 
+
+.secao_final a span {
+    display: inline-flex;
+}
+
+
+.secao_final a span img {
+    width: 20px;
+}
+
+
 .botao_enviar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
     background-color: rgb(56, 229, 56);
     border: 1px solid black;
     color: rgb(0, 0, 0);
-    padding: 10px 6px;
+    padding: 10px 12px;
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
@@ -208,4 +227,8 @@ h2 {
     background-color: #52c958;
     transform: scale(1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botao_enviar img {
+    width: 20px;
 }

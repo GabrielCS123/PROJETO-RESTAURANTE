@@ -104,16 +104,12 @@ body {
     padding: 20px;
 }
 
-
-
-
 .produto {
     background-color: #e2e2e2;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
     padding: 10px;
-    transition: background-color 0.3s ease-in-out;
 }
 
 .produto img {
@@ -139,11 +135,8 @@ body {
     color: #333;
 }
 
-/* Mantém o hover por um curto período no mobile */
-.produto:hover,
-.produto:focus-within {
-    background-color: rgb(210, 201, 201);
-    transition: background-color 0.3s ease-in-out;
+.produto:hover {
+    background-color: white;
 }
 
 .botaoEnviar {
@@ -160,23 +153,30 @@ body {
     width: auto;
     max-width: 100%;
     display: inline-block;
-    touch-action: manipulation; /* Melhora resposta ao toque */
 }
 
-/* Melhora o efeito no mobile */
-.botaoEnviar:hover,
-.botaoEnviar:focus {
+/* Hover */
+.botaoEnviar:hover {
     background-color: rgb(143, 97, 32);
     color: #ffffff;
     border: 2px solid black;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Garante que o active tenha um efeito visível */
+/* Active */
 .botaoEnviar:active {
     background-color: rgb(120, 80, 25);
-    transform: scale(0.95);
-    transition: transform 0.1s ease, background-color 0.1s ease;
+    transform: scale(0.98);
+}
+
+/* Mobile-friendly transitions */
+.botaoEnviar {
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.2s ease-in-out;
+}
+
+.botaoEnviar:hover,
+.botaoEnviar:active {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }

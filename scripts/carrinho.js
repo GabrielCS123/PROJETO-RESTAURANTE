@@ -130,7 +130,7 @@ function renderizarCardapio(containerId, filtro = null, termoPesquisa = '') {
                     <p class="nome">${item.nome}</p>
                     <p class="descricao">${item.descricao}</p>
                     <p class="preco">${item.valor}</p>
-                    <button class="botaoEnviar"">Enviar para o carrinho</button>
+                    <button class="botaoEnviar">Enviar para o carrinho</button>
                 </div>
             </div>
         `
@@ -268,7 +268,6 @@ if (document.getElementById('listaCardapio')) {
         }
     })
 }
-
 
 // Página 2 (Lista Carrinho)
 if (document.getElementById('listaCarrinho')) {
@@ -409,4 +408,3 @@ function enviarCarrinhoParaWhatsApp() {
 
 // Adicionar evento ao botão de envio
 document.getElementById('enviarCarrinho').addEventListener('click', enviarCarrinhoParaWhatsApp);
-
