@@ -264,6 +264,10 @@ if (document.getElementById('listaCardapio')) {
                 const itemId = parseInt(itemDiv.dataset.id, 10)
                 moverItem(itemId)
                 renderizarCardapio('listaCardapio')  // Re-renderiza o cardápio para atualizar a exibição
+
+
+                const item = listaCardapio.find(item => item.id === itemId);
+                alert(`${item.nome} foi adicionado ao carrinho`);
             }
         }
     })

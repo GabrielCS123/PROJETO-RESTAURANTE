@@ -232,3 +232,9 @@ h2 {
 .botao_enviar img {
     width: 20px;
 }
+
+@media screen and (min-width: 800px) {
+    main {
+        padding: 20px 20%;
+    }
+}

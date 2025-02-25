@@ -13,6 +13,10 @@ body {
 
 /* Header */
 
+.botao_menu_grande{
+    display: none;
+}
+
 header {
     background-color: #ffffff;
     color: #000000;
@@ -127,4 +131,21 @@ header .botao_carrinho a {
     height: 18px;
     border-radius: 50%;
     transform: translate(50%, -45%);
+}
+
+@media screen and (min-width: 700px) {
+    .header_direito .botao_menu {
+        display: none;
+    }
+
+    .botao_menu_grande {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .botao_menu_grande a {
+        text-decoration: none;
+        color: #000000;
+    }
 }

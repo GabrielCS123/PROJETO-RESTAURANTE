@@ -147,3 +147,58 @@
     background-color: #ff0000;
     color: #fff;
 }
+
+
+@media screen and (min-width: 700px) {
+
+    .banner_imagem img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .servicos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 60px 80px;
+        gap: 20px;
+    }
+
+    .chamada-pedidos {
+        padding: 60px 80px;
+    }
+
+    .mais-amados {
+        padding: 80px 0 20px 0;
+    }
+
+    .lista-pizzas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        padding: 60px 80px;
+        margin: 0;
+    }
+
+    .rodape-cardapio {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 60px 80px;
+        margin: 0;
+    } 
+}
+
+@media screen and (min-width: 900px) {
+
+    .banner_imagem img {
+        height: 500px;
+    }
+
+    .lista-pizzas {
+        justify-content: space-around;
+    }
+
+}
