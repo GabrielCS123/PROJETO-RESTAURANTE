@@ -66,8 +66,9 @@
     background-color: #ff6a00;
     color: white;
     text-align: center;
-    padding: 30px 30px 40px 30px;
+    padding: 50px 30px 60px 30px;
     position: relative;
+    overflow: hidden;
 }
 
 .conteudo-chamada h2 {
@@ -155,15 +156,6 @@
 .rodape-cardapio a {
     background-color: #ff0000;
     color: #fff;
-}
-
-.chamada-pedidos {
-    background-color: #ff6a00;
-    color: white;
-    text-align: center;
-    padding: 30px 30px 40px 30px;
-    position: relative;
-    overflow: hidden;
 }
 
 .conteudo-chamada {
