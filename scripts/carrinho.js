@@ -208,51 +208,65 @@ function renderizarCarrinho(containerId) {
 
     if (lista.length === 0) {
         container.innerHTML = `<p>Seu carrinho está vazio. Adicione itens!</p>`;
-    } else {
-        lista.forEach(item => {
-            const divTotal = document.createElement('div');
-            divTotal.className = 'item';
-
-            divTotal.innerHTML = `
-                <div class="item_detalhes">
-                    <div class="item_detalhes_imagem">
-                        <img src="${item.imagem}" alt="Imagem do produto">
-                    </div>
-
-                    <div class="item_detalhes_descricoes">
-                        <h3>${item.nome}</h3>
-                        <div class="item_detalhes_descricoes_quantidade">
-                            <button class="botaoD" data-id="${item.id}">-</button>
-                            <p class="ADQuantidade">${item.quantidade}</p>
-                            <button class="botaoA" data-id="${item.id}">+</button>
-                        </div>
-                    </div>
-
-                    <div class="item_detalhes_valor">
-                        <p>${item.valor}</p>
-                        <div class="botao_apagar" onclick="apagarItem(${item.id})">
-                            <img src="imagens/lixeira.png" alt="apagar">
-                        </div>
-                    </div>
-                </div>
-                <div class="item_observacao">
-                    <label for="observacao_${item.id}">Alguma observação?</label>
-                    <textarea class="observacao-input" data-id="${item.id}" placeholder="Ex: Sem cebola, ponto da carne, etc.">${item.observacao || ''}</textarea>
-                </div>
-            `;
-            container.appendChild(divTotal);
-        });
-
-        document.querySelectorAll('.botaoA').forEach(botao => {
-            botao.onclick = () => alterarQuantidade(botao.dataset.id, 1);
-        });
-
-        document.querySelectorAll('.botaoD').forEach(botao => {
-            botao.onclick = () => alterarQuantidade(botao.dataset.id, -1);
-        });
+        return;
     }
-}
 
+    let totalGeral = 0; // Variável para armazenar o total geral
+
+    lista.forEach(item => {
+        const divTotal = document.createElement('div');
+        divTotal.className = 'item';
+
+        // Calcula o total do item (quantidade × preço unitário)
+        const totalItem = item.quantidade * item.valor;
+        totalGeral += totalItem; // Soma ao total geral
+
+        divTotal.innerHTML = `
+            <div class="item_detalhes">
+                <div class="item_detalhes_imagem">
+                    <img src="${item.imagem}" alt="Imagem do produto">
+                </div>
+
+                <div class="item_detalhes_descricoes">
+                    <h3>${item.nome}</h3>
+                    <p class="preco_unitario">Unidade: R$ ${item.valor.toFixed(2)}</p>
+                    <div class="item_detalhes_descricoes_quantidade">
+                        <button class="botaoD" data-id="${item.id}">-</button>
+                        <p class="ADQuantidade">${item.quantidade}</p>
+                        <button class="botaoA" data-id="${item.id}">+</button>
+                    </div>
+                    </div>
+                    
+                    <div class="item_detalhes_valor">
+                    <p class="total_item">Total: R$ ${totalItem.toFixed(2)}</p>
+                    <div class="botao_apagar" onclick="apagarItem(${item.id})">
+                        <img src="imagens/lixeira.png" alt="apagar">
+                    </div>
+                </div>
+            </div>
+            <div class="item_observacao">
+                <label for="observacao_${item.id}">Alguma observação?</label>
+                <textarea class="observacao-input" data-id="${item.id}" placeholder="Ex: Sem cebola, ponto da carne, etc.">${item.observacao || ''}</textarea>
+            </div>
+        `;
+        container.appendChild(divTotal);
+    });
+
+    // Adiciona a exibição do total geral no final do carrinho
+    const totalDiv = document.createElement('div');
+    totalDiv.className = 'total_geral';
+    totalDiv.innerHTML = `<h3>Total do Pedido: R$ ${totalGeral.toFixed(2)}</h3>`;
+    container.appendChild(totalDiv);
+
+    // Adiciona eventos aos botões de adicionar/remover
+    document.querySelectorAll('.botaoA').forEach(botao => {
+        botao.onclick = () => alterarQuantidade(botao.dataset.id, 1);
+    });
+
+    document.querySelectorAll('.botaoD').forEach(botao => {
+        botao.onclick = () => alterarQuantidade(botao.dataset.id, -1);
+    });
+}
 
 // Mover item para lista do carrinho
 function moverItem(id) {

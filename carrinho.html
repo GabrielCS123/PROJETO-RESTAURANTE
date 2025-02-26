@@ -61,10 +61,10 @@
         <section class="secao_detalhes">
             <form>
                 <h2>Detalhes do Pedido</h2>
-
+        
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" placeholder="Seu nome completo" required>
-
+        
                 <fieldset>
                     <legend>Tipo de pedido</legend>
                     <label>
@@ -74,11 +74,17 @@
                         <input type="radio" name="tipoPedido" value="retirada"> Retirar no local
                     </label>
                 </fieldset>
-
+        
                 <label for="endereco">Endereço</label>
-                <textarea id="endereco" placeholder="Endereço para entrega com rua, numero, bairro..."></textarea>
+                <textarea id="endereco" placeholder="Endereço para entrega com rua, número, bairro..."></textarea>
+        
+                <label for="tipoPagamento">Tipo de Pagamento</label>
+                <select id="tipoPagamento" name="tipoPagamento">
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartão de Crédito/Débito</option>
+                    <option value="pix">PIX</option>
+                </select>
             </form>
-
         </section>
 
         <section class="secao_final">

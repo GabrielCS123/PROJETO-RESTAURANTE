@@ -1,5 +1,4 @@
-/*Temporario*/
-
+/* Temporário */
 #QuantCarrinho p {
     margin: 0;
 }
@@ -35,7 +34,7 @@ h2 {
 .listaCarrinho h2,
 .secao_detalhes h2 {
     color: #000000;
-    margin: 0px;
+    margin: 0;
 }
 
 .listaCarrinho {
@@ -56,6 +55,12 @@ h2 {
     grid-template-columns: auto auto 1fr;
     align-items: center;
     gap: 15px;
+    margin-bottom: 20px;
+}
+
+.item_detalhes_imagem {
+    display: flex;
+    align-items: center;
 }
 
 .item_detalhes_imagem img {
@@ -75,6 +80,12 @@ h2 {
     margin: 0;
 }
 
+.item_detalhes_descricoes p {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+}
+
+/* Botões de quantidade com transição para cor */
 .item_detalhes_descricoes_quantidade {
     background-color: #ffffff;
     display: inline-flex;
@@ -91,6 +102,7 @@ h2 {
     border-radius: 4px;
     padding: 4px 8px;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .item_detalhes_descricoes_quantidade p {
@@ -106,12 +118,11 @@ h2 {
     flex-direction: column;
     gap: 18px;
     justify-self: end;
-    white-space: nowrap;
 }
-
 
 .item_detalhes_valor p {
     justify-self: end;
+    text-align: right;
     color: #000000;
     margin: 0;
 }
@@ -125,6 +136,11 @@ h2 {
     width: 20px;
     object-fit: cover;
     justify-self: end;
+    transition: transform 0.3s ease; /* Adiciona a transição */
+}
+
+.botao_apagar img:hover {
+    transform: scale(1.1); /* Aumenta levemente a imagem no hover */
 }
 
 .item_observacao {
@@ -151,6 +167,7 @@ h2 {
     font-weight: bold;
 }
 
+/* Inputs e Textareas com transição de hover igual ao select */
 .secao_detalhes input[type="text"],
 .secao_detalhes textarea {
     width: 100%;
@@ -158,6 +175,15 @@ h2 {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.secao_detalhes input[type="text"]:hover,
+.secao_detalhes textarea:hover,
+.secao_detalhes input[type="text"]:focus,
+.secao_detalhes textarea:focus {
+    border-color: #000000;
+    outline: none;
 }
 
 .secao_detalhes fieldset {
@@ -175,6 +201,32 @@ h2 {
     margin-right: 5px;
 }
 
+/* Estilização do novo select para Tipo de Pagamento */
+label[for="tipoPagamento"] {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+#tipoPagamento {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#tipoPagamento:focus {
+    border-color: #000000;
+}
+
 .secao_final {
     display: flex;
     align-items: center;
@@ -185,23 +237,20 @@ h2 {
 .secao_final a {
     text-decoration: none;
     color: #000000;
-    
     display: flex;
     align-items: center;
     gap: 7px;
 }
 
-
 .secao_final a span {
     display: inline-flex;
 }
-
 
 .secao_final a span img {
     width: 20px;
 }
 
-
+/* Botão Enviar com transições fluidas para fundo, cor e escala */
 .botao_enviar {
     display: flex;
     align-items: center;
@@ -213,14 +262,13 @@ h2 {
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .botao_enviar:hover {
     background-color: #5cd260;
     color: white;
-    cursor: pointer;
     transform: scale(1.02);
-    transition: transform 0.3s ease;
 }
 
 .botao_enviar:active {
@@ -236,5 +284,18 @@ h2 {
 @media screen and (min-width: 800px) {
     main {
         padding: 20px 20%;
+    }
+
+    .item_detalhes_imagem img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .item_detalhes_descricoes h3 {
+        font-size: 18px;
+    }
+
+    .item_detalhes_descricoes p {
+        font-size: 16px;
     }
 }
