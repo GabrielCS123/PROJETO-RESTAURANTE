@@ -381,6 +381,7 @@ function enviarCarrinhoParaWhatsApp() {
         const nome = document.getElementById('nome').value || 'Não informado';
         const tipoPedido = document.querySelector('input[name="tipoPedido"]:checked').value;
         const endereco = document.getElementById('endereco').value || 'Não informado';
+        const pagamento  = document.getElementById('tipoPagamento').value || 'Não informado';
 
         // Cria a mensagem
         let mensagem = `Olá, gostaria de realizar o seguinte pedido:\n\n`;
@@ -389,7 +390,8 @@ function enviarCarrinhoParaWhatsApp() {
         mensagem += `Detalhes do Pedido:\n`;
         mensagem += `Nome: ${nome}\n`;
         mensagem += `Tipo de pedido: ${tipoPedido}\n`;
-        mensagem += `Endereço: ${endereco}\n\n`;
+        mensagem += `Endereço: ${endereco}\n`;
+        mensagem += `Tipo de pagamento: ${pagamento}\n\n`;
 
         // Para cada item no carrinho, adicione as informações (nome, quantidade, preço, observação)
         listaCarrinho.forEach(item => {
