@@ -5,6 +5,7 @@
     text-align: center;
     color: white;
 }
+
 .banner .texto_banner {
     position: absolute;
     top: 50%;
@@ -33,10 +34,12 @@
     left: 0;
     width: 100%;
     height: 99%;
-    background: rgba(158, 67, 3, 0.664); /* Laranja com transparência */
-    mix-blend-mode: multiply; /* Mistura a cor com a imagem */
+    background: rgba(158, 67, 3, 0.664);
+    /* Laranja com transparência */
+    mix-blend-mode: multiply;
+    /* Mistura a cor com a imagem */
 }
-    
+
 /* servicos */
 
 .servicos {
@@ -47,9 +50,11 @@
     padding: 40px 40px;
     background-color: #fff;
 }
+
 .servico {
     text-align: center;
 }
+
 .servico img {
     width: 50px;
     height: 50px;
@@ -98,7 +103,7 @@
 
 .mais-amados h2 {
     font-size: 22px;
-    margin:0 0 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .lista-pizzas {
@@ -110,6 +115,10 @@
     gap: 35px;
     margin-bottom: 20px;
     padding: 40px 20px;
+}
+
+.lista-pizzas p {
+    white-space: nowrap;
 }
 
 .item-pizza {
@@ -148,6 +157,53 @@
     color: #fff;
 }
 
+.chamada-pedidos {
+    background-color: #ff6a00;
+    color: white;
+    text-align: center;
+    padding: 30px 30px 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.conteudo-chamada {
+    position: relative;
+    z-index: 2;
+}
+
+.hamburguer-img {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.top-left {
+    top: -15px;
+    left: -30px;
+    width: 100px;
+    transform: rotate(-20deg);
+}
+
+.top-right {
+    top: -10px;
+    right: -30px;
+    width: 120px;
+    transform: rotate(15deg);
+}
+
+.bottom-left {
+    bottom: -20px;
+    left: -15px;
+    width: 100px;
+    transform: rotate(20deg);
+}
+
+.bottom-right {
+    bottom: -10px;
+    right: -20px;
+    width: 110px;
+    transform: rotate(-20deg);
+}
 
 @media screen and (min-width: 700px) {
 
@@ -188,7 +244,44 @@
         gap: 20px;
         padding: 60px 80px;
         margin: 0;
-    } 
+    }
+
+    .conteudo-chamada {
+        padding: 40px;
+    }
+
+    .hamburguer-img {
+        opacity: 0.7;
+    }
+
+    .top-left {
+        top: -25px;
+        left: -50px;
+        width: 200px;
+        transform: rotate(-20deg);
+    }
+
+    .top-right {
+        top: -10px;
+        right: -50px;
+        width: 210px;
+        transform: rotate(15deg);
+    }
+
+    .bottom-left {
+        bottom: -20px;
+        left: -10px;
+        width: 150px;
+        transform: rotate(20deg);
+    }
+
+    .bottom-right {
+        bottom: -10px;
+        right: -20px;
+        width: 140px;
+
+    }
+
 }
 
 @media screen and (min-width: 900px) {

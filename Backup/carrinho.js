@@ -1,68 +1,44 @@
-// Lista com os produtos do restaurante
-let listaCardapio = [
-    {
-        id: 1,
-        nome: 'X-Cheddar',
-        valor: 24.90,
-        descricao: 'Smash burger, queijo cheddar, cebola caramelizada e molho especial.',
-        imagem: 'imagens/exemplo_pizza1.png',
-        quantidade: 0,
-        tag: 'Cheddar Queijo'
-    },
-    {
-        id: 2,
-        nome: 'X-Bacon',
-        valor: 29.90,
-        descricao: 'Picanha, bacon crocante, queijo prato e maionese defumada.',
-        imagem: 'imagens/exemplo_pizza1.png',
-        quantidade: 0,
-        tag: 'Bacon Favorito'
-    },
-    {
-        id: 3,
-        nome: 'X-Salada',
-        valor: 25.90,
-        descricao: 'Angus, alface, tomate, queijo muçarela e maionese especial.',
-        imagem: 'imagens/exemplo_pizza1.png',
-        quantidade: 0,
-        tag: 'Salada Leve'
-    },
-    {
-        id: 4,
-        nome: 'X-Calabresa',
-        valor: 26.80,
-        descricao: 'Angus, calabresa grelhada, queijo prato e maionese temperada.',
-        imagem: 'imagens/exemplo_pizza1.png',
-        quantidade: 0,
-        tag: 'Queijo'
-    },
-    {
-        id: 5,
-        nome: 'Coca-Cola (Lata 350ml)',
-        valor: 7.50,
-        descricao: 'Gelada e refrescante.',
-        imagem: 'imagens/exemplo_pizza1.png',
-        quantidade: 0,
-        tag: 'Bebida'
-    },
-    {
-        id: 6,
-        nome: 'Suco de Maracujá',
-        valor: 10.40,
-        descricao: 'Natural e equilibrado, feito na hora.',
-        imagem: 'imagens/exemplo_pizza1.png',
-        quantidade: 0,
-        tag: 'Bebida'
-    }
-]
+// Verifica se listaCardapio já existe no localStorage, se não, define a lista
+if (!localStorage.getItem('listaCardapio')) {
+    // Lista com os produtos do restaurante
+    let listaCardapio = [
+        {
+            id: 1, nome: 'X-Cheddar', valor: 24.90, descricao: 'Smash burger, queijo cheddar, cebola caramelizada e molho especial.',
+            imagem: 'imagens/exemplo_pizza1.png', quantidade: 0, tag: 'Cheddar Queijo'
+        },
 
-// Função para salvar a lista no localStorage
-function salvarListaNoLocalStorage() {
+        {
+            id: 2, nome: 'X-Bacon', valor: 29.90, descricao: 'Picanha, bacon crocante, queijo prato e maionese defumada.',
+            imagem: 'imagens/exemplo_pizza1.png', quantidade: 0, tag: 'Bacon Favorito'
+        },
+
+        {
+            id: 3, nome: 'X-Salada', valor: 25.90, descricao: 'Angus, alface, tomate, queijo muçarela e maionese especial.',
+            imagem: 'imagens/exemplo_pizza1.png', quantidade: 0, tag: 'Salada Leve'
+        },
+
+        {
+            id: 4, nome: 'X-Calabresa', valor: 26.80, descricao: 'Angus, calabresa grelhada, queijo prato e maionese temperada.',
+            imagem: 'imagens/exemplo_pizza1.png', quantidade: 0, tag: 'Queijo'
+        },
+
+        {
+            id: 5, nome: 'Coca-Cola (Lata 350ml)', valor: 7.50, descricao: 'Gelada e refrescante.',
+            imagem: 'imagens/exemplo_pizza1.png', quantidade: 0, tag: 'Bebida'
+        },
+
+        {
+            id: 6, nome: 'Suco de Maracujá', valor: 10.40, descricao: 'Natural e equilibrado, feito na hora.',
+            imagem: 'imagens/exemplo_pizza1.png', quantidade: 0, tag: 'Bebida'
+        }
+
+    ];
+
     localStorage.setItem('listaCardapio', JSON.stringify(listaCardapio));
 }
 
-salvarListaNoLocalStorage();
-
+// Recupera listaCardapio e listaCarrinho do localStorage
+let listaCardapio = JSON.parse(localStorage.getItem('listaCardapio'))
 let listaCarrinho = JSON.parse(localStorage.getItem('listaCarrinho')) || []
 
 mostrarQuantidade()
@@ -381,7 +357,7 @@ function enviarCarrinhoParaWhatsApp() {
         listaCarrinho.forEach(item => {
             // Captura a observação diretamente do item salvo no localStorage
             const observacao = item.observacao || 'Sem observação';
-
+        
             mensagem += `
             Produto: ${item.nome}
             Quantidade: ${item.quantidade}
@@ -390,7 +366,7 @@ function enviarCarrinhoParaWhatsApp() {
             -------------------------
             `;
         });
-
+        
 
         // Codifique a mensagem para ser usada na URL
         const mensagemCodificada = encodeURIComponent(mensagem.trim());
