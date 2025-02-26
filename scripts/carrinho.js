@@ -381,7 +381,13 @@ function enviarCarrinhoParaWhatsApp() {
         const nome = document.getElementById('nome').value || 'Não informado';
         const tipoPedido = document.querySelector('input[name="tipoPedido"]:checked').value;
         const endereco = document.getElementById('endereco').value || 'Não informado';
-        const pagamento  = document.getElementById('tipoPagamento').value || 'Não informado';
+        const pagamento = document.getElementById('tipoPagamento').value || 'Não informado';
+
+        let totalGeral = 0;
+        listaCarrinho.forEach(item => {
+            totalGeral += item.quantidade * item.valor;
+        });
+
 
         // Cria a mensagem
         let mensagem = `Olá, gostaria de realizar o seguinte pedido:\n\n`;
@@ -401,12 +407,16 @@ function enviarCarrinhoParaWhatsApp() {
             mensagem += `
             Produto: ${item.nome}
             Quantidade: ${item.quantidade}
-            Preço: R$ ${item.valor}
+            Preço unidade: R$ ${item.valor}
+            Preço total: R$ ${(item.valor) * (item.quantidade)}
             Observação: ${observacao}
             -------------------------
             `;
         });
 
+        mensagem += `\n\n`
+
+        mensagem += `Valor total: ${totalGeral.toFixed(2)}`;
 
         // Codifique a mensagem para ser usada na URL
         const mensagemCodificada = encodeURIComponent(mensagem.trim());
