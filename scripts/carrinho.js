@@ -5,7 +5,7 @@ let listaCardapio = [
         nome: 'X-Cheddar',
         valor: 24.90,
         descricao: 'Smash burger, queijo cheddar, cebola caramelizada e molho especial.',
-        imagem: 'imagens/exemplo_pizza1.png',
+        imagem: 'imagens/Xcheaddar.png',
         quantidade: 0,
         tag: 'Cheddar Queijo'
     },
@@ -14,7 +14,7 @@ let listaCardapio = [
         nome: 'X-Bacon',
         valor: 29.90,
         descricao: 'Picanha, bacon crocante, queijo prato e maionese defumada.',
-        imagem: 'imagens/exemplo_pizza1.png',
+        imagem: 'imagens/Xbacon.png',
         quantidade: 0,
         tag: 'Bacon Favorito'
     },
@@ -23,7 +23,7 @@ let listaCardapio = [
         nome: 'X-Salada',
         valor: 25.90,
         descricao: 'Angus, alface, tomate, queijo muçarela e maionese especial.',
-        imagem: 'imagens/exemplo_pizza1.png',
+        imagem: 'imagens/Xsalada.png',
         quantidade: 0,
         tag: 'Salada Leve'
     },
@@ -32,7 +32,7 @@ let listaCardapio = [
         nome: 'X-Calabresa',
         valor: 26.80,
         descricao: 'Angus, calabresa grelhada, queijo prato e maionese temperada.',
-        imagem: 'imagens/exemplo_pizza1.png',
+        imagem: 'imagens/Xcalabresa.png',
         quantidade: 0,
         tag: 'Queijo'
     },
@@ -41,7 +41,7 @@ let listaCardapio = [
         nome: 'Coca-Cola (Lata 350ml)',
         valor: 7.50,
         descricao: 'Gelada e refrescante.',
-        imagem: 'imagens/exemplo_pizza1.png',
+        imagem: 'imagens/CocaCola350.png',
         quantidade: 0,
         tag: 'Bebida'
     },
@@ -50,7 +50,7 @@ let listaCardapio = [
         nome: 'Suco de Maracujá',
         valor: 10.40,
         descricao: 'Natural e equilibrado, feito na hora.',
-        imagem: 'imagens/exemplo_pizza1.png',
+        imagem: 'imagens/suco.png',
         quantidade: 0,
         tag: 'Bebida'
     }

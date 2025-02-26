@@ -107,7 +107,7 @@
     margin: 0 0 20px 0;
 }
 
-.lista-pizzas {
+.lista {
     background-color: #ff6a00;
     display: flex;
     align-items: center;
@@ -118,11 +118,11 @@
     padding: 40px 20px;
 }
 
-.lista-pizzas p {
+.lista p {
     white-space: nowrap;
 }
 
-.item-pizza {
+.item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,12 +131,13 @@
     max-width: 100px;
 }
 
-.item-pizza img {
+.item img {
     width: 200%;
     border-radius: 5px;
+    border: 3px solid rgba(0, 0, 0, 0.605);
 }
 
-.item-pizza p {
+.item p {
     color: #fff;
     margin: 0;
     font-size: 20px;
@@ -221,7 +222,7 @@
         padding: 80px 0 20px 0;
     }
 
-    .lista-pizzas {
+    .lista {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -282,7 +283,7 @@
         height: 500px;
     }
 
-    .lista-pizzas {
+    .lista {
         justify-content: space-around;
     }
 
