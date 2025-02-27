@@ -1,0 +1,62 @@
+body {
+    background-color: #ebb58e;
+}
+
+.principal {
+    background-color: #ebb58e;  
+}
+
+.secao_sobre {
+    padding: 20px ;
+    text-align: center;
+}
+
+.secao_sobre h1 {
+    color: #ff6600;
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.secao_sobre p {
+    font-size: 20px;
+}
+
+.secao_mapa {
+    text-align: center;
+}
+
+.secao_mapa iframe {
+    border-radius: 18px;
+}
+
+.secao_mapa h2, h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+@media screen and (min-width: 900px) {
+
+    body {
+        background-color: #ff6a00;
+    }
+    
+    main {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    .principal {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        border-radius: 18px;
+        padding: 20px 10px;
+    }
+
+    .secao_sobre {
+        width: 50%;
+        text-align: start;
+    }
+}

@@ -1,0 +1,80 @@
+body {
+    background-color: #ff6a00;
+}
+
+.secao_contato_1 {
+    color: white;
+    text-align: center;
+    padding: 50px 30px 25px 30px;
+}
+
+.secao_contato_1 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.secao_contato_1 h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 12px 0 0 0;
+}
+
+.secao_contato_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.secao_contato_2 img {
+    width: 30px;
+}
+
+.secao_contato_2_atendimento, .secao_contato_2_redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao_contato_2_atendimento h3, .secao_contato_2_redes h3 {
+    font-size: 25px;
+    color: white;
+}
+
+.secao_contato_2_atendimento div , .secao_contato_2_redes div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.secao_contato_2_atendimento a, .secao_contato_2_redes a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 700px) {
+    .secao_contato_2 {
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .secao_contato_2_atendimento, .secao_contato_2_redes {
+        align-items: start;
+    }
+
+    body {
+        background-color: #ffffff;  
+    }
+
+    main {
+        background-color: #ff6a00;
+        height: 80vh;
+        margin: 0 7%;
+    }
+    
+    
+}

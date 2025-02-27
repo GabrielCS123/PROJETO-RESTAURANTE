@@ -21,7 +21,7 @@ let listaCardapio = [
     {
         id: 3,
         nome: 'X-Salada',
-        valor: 25.90,
+        valor: 25.37,
         descricao: 'Angus, alface, tomate, queijo muçarela e maionese especial.',
         imagem: 'imagens/Xsalada.png',
         quantidade: 0,
@@ -30,7 +30,7 @@ let listaCardapio = [
     {
         id: 4,
         nome: 'X-Calabresa',
-        valor: 26.80,
+        valor: 26.82,
         descricao: 'Angus, calabresa grelhada, queijo prato e maionese temperada.',
         imagem: 'imagens/Xcalabresa.png',
         quantidade: 0,
@@ -48,7 +48,7 @@ let listaCardapio = [
     {
         id: 6,
         nome: 'Suco de Maracujá',
-        valor: 10.40,
+        valor: 10.46,
         descricao: 'Natural e equilibrado, feito na hora.',
         imagem: 'imagens/suco.png',
         quantidade: 0,
@@ -407,8 +407,8 @@ function enviarCarrinhoParaWhatsApp() {
             mensagem += `
             Produto: ${item.nome}
             Quantidade: ${item.quantidade}
-            Preço unidade: R$ ${item.valor}
-            Preço total: R$ ${(item.valor) * (item.quantidade)}
+            Preço unidade: R$ ${(item.valor).toFixed(2)}
+            Preço total: R$ ${((item.valor) * (item.quantidade)).toFixed(2)}
             Observação: ${observacao}
             -------------------------
             `;
